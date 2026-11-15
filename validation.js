@@ -1,6 +1,3 @@
-
-
-
 // Select the feedback form
 const form = document.getElementById("feedbackForm");
 
