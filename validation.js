@@ -1,9 +1,5 @@
 
-/*
-Author: Michael Williams
-Project: JavaScript Form Validation
-Website: DeuceGaming
-*/
+
 
 // Select the feedback form
 const form = document.getElementById("feedbackForm");
