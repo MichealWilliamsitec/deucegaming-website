@@ -1,22 +1,111 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <!-- Author: Michael Williams -->
+   
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>DeuceGaming | Feedback</title>
    <link rel="stylesheet" href="styles.css">
+   <style>
+      .error-message {
+         color: #ff6b6b;
+         font-size: 14px;
+         margin: 4px 0 12px;
+         display: block;
+      }
+
+      .success-message {
+         color: #4ade80;
+         font-weight: bold;
+         margin-top: 15px;
+      }
+
+      .input-error {
+         border: 2px solid #ff6b6b !important;
+      }
+   </style>
 </head>
 <body>
    <header class="site-header">
-      <a class="logo" href="index.html">DEUCE <span>GAMING</span></a>
-      <nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="videos.html">Videos</a><a class="home-link" href="feedback.html">Feedback</a><a href="community.html">Community</a></nav>
-      <a class="follow-button" href="https://www.youtube.com/@DeuceGamingChannel" target="_blank">Follow Me</a>
+      <a class="logo" href="index.html">
+         DEUCE <span>GAMING</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+         <a href="index.html">Home</a>
+         <a href="about.html">About</a>
+         <a href="videos.html">Videos</a>
+         <a class="home-link" href="feedback.html">Feedback</a>
+         <a href="community.html">Community</a>
+      </nav>
+
+      <a class="follow-button"
+         href="https://www.youtube.com/@DeuceGamingChannel"
+         target="_blank">
+         Follow Me
+      </a>
    </header>
+
    <main>
-      <section class="videos-heading"><p class="eyebrow">SEND FEEDBACK</p><h1>Your ideas matter.</h1><p class="intro">Have a video idea, question, or message for DeuceGaming? Send it here.</p></section>
-      <section class="feedback-section"><form class="feedback-form" action="#" method="post"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your name" required><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com" required><label for="message">Message</label><textarea id="message" name="message" placeholder="Write your message here..." required></textarea><button class="primary-button" type="submit">Send Message</button></form></section>
+      <section class="videos-heading">
+         <p class="eyebrow">SEND FEEDBACK</p>
+         <h1>Your ideas matter.</h1>
+         <p class="intro">
+            Have a video idea, question, or message
+            for DeuceGaming? Send it here.
+         </p>
+      </section>
+
+      <section class="feedback-section">
+         <form class="feedback-form"
+               id="feedbackForm"
+               action="#"
+               method="post"
+               novalidate>
+
+            <label for="name">Name</label>
+            <input id="name"
+                   name="name"
+                   type="text"
+                   placeholder="Your name">
+            <span class="error-message"
+                  id="nameError"></span>
+
+            <label for="email">Email</label>
+            <input id="email"
+                   name="email"
+                   type="email"
+                   placeholder="you@example.com">
+            <span class="error-message"
+                  id="emailError"></span>
+
+            <label for="message">Message</label>
+            <textarea id="message"
+                      name="message"
+                      placeholder="Write your message here..."></textarea>
+            <span class="error-message"
+                  id="messageError"></span>
+
+            <button class="primary-button"
+                    type="submit">
+               Send Message
+            </button>
+
+            <p id="successMessage"
+               class="success-message"
+               role="status"
+               aria-live="polite"></p>
+         </form>
+      </section>
    </main>
-   <footer>&copy; 2026 DeuceGaming | Created by Michael Williams</footer>
+
+   <footer>
+      &copy; 2026 DeuceGaming |
+      Created by Michael Williams
+   </footer>
+
+   <script src="validation.js"></script>
 </body>
 </html>
+
